@@ -1,10 +1,17 @@
-
+import { useSelector } from "react-redux"
+import { RootState } from "./redux/store"
 
 function App() {
 
+  const{count}=useSelector((state:RootState)=>state.counter)
+
   return (
     <>
-      <h1>hello vite</h1>
+      <div className="...">
+        <button className="..."> Increment</button>
+        <div>{count}</div>
+        <button className="..."> Decrement</button>
+      </div>
     </>
   )
 }
